@@ -16,8 +16,10 @@
  */
 package com.alipay.sofa.isle.sample.bootstrap;
 
+import com.alipay.sofa.isle.sample.facade.TestPojo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * @author xuanbei 18/5/5
@@ -28,4 +30,5 @@ public class ApplicationRun {
         SpringApplication springApplication = new SpringApplication(ApplicationRun.class);
         springApplication.run(args);
     }
+
 }

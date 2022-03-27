@@ -11,6 +11,10 @@
 
     <artifactId>sofaboot-sample-standard-biz-shared</artifactId>
     <url>http://home.alipay.net</url>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
     <description>Alipay sofaboot-sample-standard-biz-shared</description>
     <packaging>jar</packaging>
 

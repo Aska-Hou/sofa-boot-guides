@@ -33,6 +33,7 @@ public class NewsReadServiceImpl implements NewsReadService<NewsDO> {
     @SofaReference
     private NewsManageDao newManageDao;
 
+    @Override
     public List<NewsDO> read(String author) throws SQLException {
         try {
             return newManageDao.query(author);

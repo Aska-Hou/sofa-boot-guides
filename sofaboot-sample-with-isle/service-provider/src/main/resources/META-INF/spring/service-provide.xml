@@ -8,9 +8,10 @@
     <bean id="sampleJvmService" class="com.alipay.sofa.isle.sample.provider.SampleJvmServiceImpl">
         <property name="message" value="Hello, jvm service xml implementation."/>
     </bean>
-
+<!---->
     <sofa:service ref="sampleJvmService" interface="com.alipay.sofa.isle.sample.facade.SampleJvmService">
-        <sofa:binding.jvm/>
+<!--        <sofa:binding.jvm/>-->
+        <sofa:binding.bolt/>
     </sofa:service>
 
     <bean id="sampleJvmServiceAnnotation" class="com.alipay.sofa.isle.sample.provider.SampleJvmServiceAnnotationImpl"/>

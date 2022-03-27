@@ -26,6 +26,7 @@ import com.alipay.sofa.runtime.api.client.param.ServiceParam;
  * @author xuanbei 18/5/5
  */
 public class PublishServiceWithClient implements ClientFactoryAware {
+
     private ClientFactory clientFactory;
 
     public void init() {

@@ -17,6 +17,7 @@
 package com.alipay.sofa.isle.sample.consumer;
 
 import com.alipay.sofa.isle.sample.facade.SampleJvmService;
+import com.alipay.sofa.isle.sample.facade.TestPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alipay.sofa.runtime.api.annotation.SofaReference;
@@ -34,12 +35,16 @@ public class JvmServiceConsumer implements ClientFactoryAware {
     @Autowired
     private SampleJvmService sampleJvmService;
 
+    @Autowired
+    private TestPojo testPojo;
+
     @SofaReference(uniqueId = "annotationImpl")
     private SampleJvmService sampleJvmServiceByFieldAnnotation;
 
     public void init() {
         sampleJvmService.message();
         sampleJvmServiceByFieldAnnotation.message();
+        System.out.println("=========" + testPojo);
 
         ReferenceClient referenceClient = clientFactory.getClient(ReferenceClient.class);
         ReferenceParam<SampleJvmService> referenceParam = new ReferenceParam<SampleJvmService>();
